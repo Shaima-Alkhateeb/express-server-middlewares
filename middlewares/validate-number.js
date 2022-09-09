@@ -19,7 +19,7 @@ module.exports = () => {
       // console.log("in valid-num")
       next();
     } else {
-      // console.log("error")
+      console.log('error');
       next(`${num} is not a number`);
     }
   };
