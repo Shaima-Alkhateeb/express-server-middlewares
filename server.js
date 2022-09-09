@@ -33,7 +33,7 @@ app.use(errorHandler);
 
 
 function start(port) {
-  app.listen(3008 || 3009, () => console.log(`server up a wake ^_^ on ${port}`));
+  app.listen(port || 3009, () => console.log(`server up a wake ^_^ on ${port}`));
 }
 
 
