@@ -1,13 +1,26 @@
 'use strict';
 
-module.exports = (num) => {
+// module.exports = () => {
+//   const num = req.query.num
+//   if(!isNaN(num)) {
+//     // console.log("in valid-num")
+//     next();
+//   } else {
+//     // console.log("error")
+//     next(`${num} is not a number`)
+//   }
+// };
+
+module.exports = () => {
   return (req, res, next) => {
-    if(typeof num === 'number') {
-      req.number = num*num;
+    const num = req.query.num;
+
+    if(!isNaN(num)) {
+      // console.log("in valid-num")
       next();
-    }
-    else {
-      next('Try agin is not a number');
+    } else {
+      // console.log("error")
+      next(`${num} is not a number`);
     }
   };
 };

@@ -20,9 +20,11 @@ app.get('/', (req, res) => {
 
 // Route level middleware
 app.get('/square', validNumber('5'), (req, res) => {
-  const num = req.number;
+  // const num = req.number;
   // res.send(number);
-  res.status(200).json({ num: num });
+  const num = req.query.num;
+  const data = num * num;
+  res.status(200).json({ num: data });
 });
 
 

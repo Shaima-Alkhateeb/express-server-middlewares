@@ -13,9 +13,9 @@ describe('API server', () => {
   });
 
   it('Is the square works', async () => {
-    const res = await request.get('/square');
+    const res = await request.get('/square').query('num= 5');
     expect(res.status).toEqual( 200 );
-    expect(res.text).toEqual('num: 25');
+    expect(res.text).toEqual('{\"num\":25}');
   });
 
   it('Is the square fails', async () => {
