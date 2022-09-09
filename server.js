@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 
 
 // Route level middleware
-app.get('/square', validNumber('5'), (req, res) => {
+app.get('/square', validNumber(), (req, res) => {
   // const num = req.number;
   // res.send(number);
   const num = req.query.num;
